@@ -1,0 +1,12 @@
+{
+    "domain": "eetlijst",
+    "name": "Eetlijst",
+    "documentation": "https://github.com/Sanderhuisman/home-assistant-eetlijst",
+    "dependencies": [],
+    "codeowners": [
+        "@Sanderhuisman"
+    ],
+    "requirements": [
+        "beautifulsoup4==4.7.1"
+    ]
+}
