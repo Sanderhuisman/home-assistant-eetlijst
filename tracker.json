@@ -1,14 +1,16 @@
 {
     "eetlijst": {
         "updated_at": "2019-09-30",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "local_location": "/custom_components/eetlijst/__init__.py",
         "remote_location": "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/__init__.py",
         "visit_repo": "https://github.com/Sanderhuisman/eetlijst",
         "changelog": "https://github.com/Sanderhuisman/eetlijst/releases/latest",
         "resources": [
             "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/manifest.json",
-            "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/sensor.py"
+            "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/sensor.py",
+            "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/const.py",
+            "https://raw.githubusercontent.com/Sanderhuisman/eetlijst/develop/custom_components/eetlijst/helpers.py"
         ]
     }
 }
