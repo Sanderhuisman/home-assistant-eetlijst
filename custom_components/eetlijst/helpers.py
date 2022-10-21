@@ -238,11 +238,11 @@ class EetlijstApi:
             # Convert to string, we don't need the rest anymore
             response = response.content.decode(response.encoding)
 
-        # Update cache and session
-        self.session = (self.session[0], self._timeout(
-            seconds=TIMEOUT_SESSION))
-        self.cache["main_page"] = (
-            response, self._timeout(seconds=TIMEOUT_CACHE))
+            # Update cache and session
+            self.session = (self.session[0], self._timeout(
+                seconds=TIMEOUT_SESSION))
+            self.cache["main_page"] = (
+                response, self._timeout(seconds=TIMEOUT_CACHE))
 
         return response
 
