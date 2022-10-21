@@ -75,6 +75,11 @@ class EetlijstSensorPerson(Entity):
         return "{} {}".format(self.accountname, self.resident)
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return 'eetlijst_' + self.name.lower().replace(" ", "_").replace("-", "_")
+
+    @property
     def icon(self):
         """Icon to use in the frontend, if any."""
         return self.var_icon
@@ -138,6 +143,11 @@ class EetlijstSensorEntity(Entity):
         return "{} {}".format(self._accountname, self._var_name)
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return 'eetlijst_' + self.name.lower().replace(" ", "_").replace("-", "_")
+
+    @property
     def icon(self):
         """Icon to use in the frontend, if any."""
         return self._var_icon
@@ -149,7 +159,10 @@ class EetlijstSensorEntity(Entity):
         state = STATE_UNAVAILABLE
         if self._var_id == CONF_UTILISATION_DEADLINE:
             # get status of today
-            state = dt_util.as_local(self._api.statuses[0].deadline).isoformat()
+            if self._api.statuses[0].deadline:
+                state = dt_util.as_local(self._api.statuses[0].deadline).isoformat()
+            else:
+                state = None
         elif self._var_id == CONF_UTILISATION_NOTICEBOARD:
             state = self._api.get_noticeboard()
         return state
